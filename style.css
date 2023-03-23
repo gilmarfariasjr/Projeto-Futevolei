@@ -14,7 +14,7 @@
   }
   .header {
     flex-basis: 100%;
-    background-image: linear-gradient(to bottom, #F20534, #c4042ad5,white);
+    background-image: linear-gradient(to bottom, black, #000000, #e00530d5);
     color: white;
     display: flex;
     padding: 15px;
@@ -39,14 +39,14 @@
     font-size: 40px;
     text-align: center;
     font-family: 'Acme';
-    color: black;
+    color: white;
   }
 
   h1{
     font-size: 40px;
     text-align: center;
     font-family: 'Acme';
-    color: #78021A;
+    color: black;
     padding: 40px;
     text-align: left;
     text-decoration: underline ;
@@ -61,27 +61,54 @@
     font-size: 20px;
     font-family: 'Open Sans';
   }
-  .mainContent {
+  .mainContent{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "item1 item2"
+    "item3 item4"
+    "item5 item6";
+    padding: 20px;
+    
+  }
+  .itens{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    gap: 20px;
-    flex: 1 0 auto;
+    justify-content: space-between;
+    gap: 30px;
   }
-  .item {
-    flex-basis: 350px;
-    height: 230px;
-    box-shadow: 0px 0px 7px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .item{
+    width: 280px;
+    height: 380px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
   }
+
+  .item1{
+    grid-area: item1;
+  }
+  .item2{
+    grid-area: item2;
+  }
+  .item3{
+    grid-area: item3;
+  }
+  .item4{
+    grid-area: item4;
+  }
+  .item5{
+    grid-area: item5;
+  }
+  .item6{
+    grid-area: item6;
+  }
+
+
   .footer {
     flex-basis: 100%;
-    background-image: linear-gradient(to top, #F20534, #c4042ad5,white);
+    background-image: linear-gradient(to top, black, #000000, #e00530d5);
     color: aliceblue;
     display: flex;
     justify-content: center;
@@ -92,10 +119,10 @@
   }
 
   a{
-    color: #006E6E ;
+    color: white ;
     text-decoration: none;
   }
 
   a:hover{
-    color: white;
+    color: #e00530d5;
   }
